@@ -1,7 +1,7 @@
 # Copyright 2023 ACSONE SA/NV
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -61,7 +61,7 @@ class IrModelFieldsTooltip(models.Model):
                     ("id", "!=", rec.id),
                 ]
             ):
-                raise UserError(_("A tooltip already exists for this field"))
+                raise UserError(self.env._("A tooltip already exists for this field"))
 
     def _get_default_model_id(self):
         tooltip_model = self.env.context.get("default_model")

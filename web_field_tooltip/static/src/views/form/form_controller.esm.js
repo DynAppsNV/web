@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/check-tag-names */
 /** @odoo-module **/
 
 import {FormController} from "@web/views/form/form_controller";
